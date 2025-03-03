@@ -9,10 +9,7 @@ export default defineConfig({
     react(),
     tailwindcss(),
     copy({
-      targets: [
-        { src: "data/data.json", dest: "dist/data" },
-        { src: "public/assets/images/*", dest: "dist/assets/images" },
-      ],
+      targets: [{ src: "data/data.json", dest: "dist/data" }],
       hook: "writeBundle",
     }),
   ],
