@@ -5,7 +5,8 @@ const ConfirmationModal = ({ onNewOrder }) => {
   const cart = useSelector((state) => state.product.cart);
 
   const getImageUrl = (path) => {
-    return new URL(`/src/${path}`, import.meta.url).href;
+    console.log(path);
+    return import(`./../${path}.jpg`);
   };
 
   return (
@@ -14,7 +15,7 @@ const ConfirmationModal = ({ onNewOrder }) => {
 
       <div
         role="dialog"
-        className="p-6 grid gap-6 fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white rounded-md min-w-[min(35rem,100%)]"
+        className="p-6 grid gap-6 fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white rounded-md min-w-[min(35rem,100%)] max-h-screen overflow-y-auto"
       >
         <img src={new URL("../assets/images/icon-order-confirmed.svg", import.meta.url).href} alt="" />
         <div>
@@ -28,11 +29,7 @@ const ConfirmationModal = ({ onNewOrder }) => {
                 key={key}
                 className="grid grid-cols-[max-content_max-content_1fr] justify-between gap-4 items-center  border-(--cl-divider) p-4"
               >
-                <img
-                  className="h-12 object-cover"
-                  src={new URL("../assets/images/image-tiramisu-thumbnail.jpg", import.meta.url).href}
-                  alt={key}
-                />
+                <img className="h-12 object-cover" src={value.image.mobile} alt={key} />
                 <div>
                   <div className="font-bold text-(--cl-rose-500)">{key}</div>
                   <div>

@@ -15,6 +15,7 @@ export const ProductCard = ({ product: { name, category, price, image } }) => {
   const cart = useSelector((state) => state.product.cart);
   const dispatch = useDispatch();
   const ac = bindActionCreators(actionCreators, dispatch);
+  const BASE_URL = import.meta.env.BASE_URL;
 
   const imageClasses = classNames({
     "rounded-md": true,
@@ -60,18 +61,18 @@ export const ProductCard = ({ product: { name, category, price, image } }) => {
   return (
     <div>
       <div className={imageClasses}>
-        <img src={new URL("../" + thumbnail, import.meta.url).href} alt={name} className="object-cover w-full h-50 rounded-md" />
+        <img src={BASE_URL + thumbnail} alt={name} className="object-cover w-full h-50 rounded-md" />
         {quantity > 0 ? (
           <div className="flex justify-between rounded-full absolute bg-(--cl-red) p-2 flex gap-2 min-w-[8.875rem] left-[50%] bottom-0 -translate-x-1/2 translate-y-[50%] text-white">
             <button
               className="h-6 w-6 border border-white rounded-full flex items-center justify-center"
               onClick={() => decrementQuantity(name)}
             >
-              <img className="" src={new URL("../assets/images/icon-decrement-quantity.svg", import.meta.url).href} alt="decrement" />
+              <img className="" src={"assets/images/icon-decrement-quantity.svg"} alt="decrement" />
             </button>
             <p>{quantity}</p>
             <button className="h-6 w-6 border border-white rounded-full flex items-center justify-center" onClick={() => addToCart()}>
-              <img className="" src={new URL("../assets/images/icon-increment-quantity.svg", import.meta.url).href} alt="decrement" />
+              <img className="" src={"assets/images/icon-increment-quantity.svg"} alt="decrement" />
             </button>
           </div>
         ) : (
@@ -79,7 +80,7 @@ export const ProductCard = ({ product: { name, category, price, image } }) => {
             className="w-max flex gap-2 absolute bottom-0 left-[50%] -translate-x-1/2 translate-y-[50%] rounded-full border border-(--cl-red) bg-white text-black py-2 px-4 cursor-pointer"
             onClick={() => addToCart()}
           >
-            <img src={new URL("../assets/images/icon-add-to-cart.svg", import.meta.url).href} alt="cart" />
+            <img src={"/assets/images/icon-add-to-cart.svg"} alt="cart" />
             <span className="whitespace-nowrap">Add to cart</span>
           </button>
         )}
