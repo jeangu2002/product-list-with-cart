@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+:root {
+  --cl-red: hsl(14, 86%, 42%);
+  --cl-green: hsl(159, 69%, 38%);
+  --cl-rose-50: hsl(20, 50%, 98%);
+  --cl-rose-100: hsl(13, 31%, 94%);
+  --cl-rose-300: hsl(14, 25%, 72%);
+  --cl-rose-400: hsl(7, 20%, 60%);
+  --cl-rose-500: hsl(12, 20%, 44%);
+  --cl-rose-900: hsl(14, 65%, 9%);
+  --cl-divider: hsla(0, 0%, 0%, 0.1);
+
+  /* font-family: 'Red Hat Text', sans-serif; */
+  --ff-red-hat: "Red Hat Text", sans-serif;
+
+  --product-card-cols: repeat(auto-fit, minmax(10rem, 1fr));
+}
