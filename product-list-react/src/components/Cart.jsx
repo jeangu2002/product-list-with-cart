@@ -47,7 +47,7 @@ export const Cart = ({ onComfirmOrder }) => {
                       className="border border-[#CAAFA7] rounded-full aspect-square h-4 flex items-center justify-center cursor-pointer"
                       onClick={() => remove(productName)}
                     >
-                      <img src={new URL("../assets/images/icon-remove-item.svg", import.meta.url).href} alt="delete" />
+                      <img src={"/assets/images/icon-remove-item.svg"} alt="delete" />
                     </button>
                   </div>
                 );
@@ -60,7 +60,7 @@ export const Cart = ({ onComfirmOrder }) => {
               </div>
             </div>
             <div className="flex justify-center items-center gap-1 text-sm p-2 bg-(--cl-rose-100) rounded-md">
-              <img src={new URL("../assets/images/icon-carbon-neutral.svg", import.meta.url).href} lt="" />
+              <img src={"/assets/images/icon-carbon-neutral.svg"} lt="" />
               <p>
                 this is a <span className="font-bold">carbon-neutral</span> delivery
               </p>
