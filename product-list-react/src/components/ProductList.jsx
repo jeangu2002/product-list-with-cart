@@ -10,7 +10,9 @@ export const ProductList = () => {
   return (
     <div className="w-full">
       <h1 className="text-5xl font-bold">Desserts</h1>
-      <div className="grid grid-cols-(--product-card-cols) w-full gap-6 flex-wrap mt-6">{renderProductList()}</div>
+      <div className="p-2 grid grid-cols-(--product-card-cols) lg:grid-cols-(--product-card-cols-lg) w-full gap-6 mt-6">
+        {renderProductList()}
+      </div>
     </div>
   );
 };

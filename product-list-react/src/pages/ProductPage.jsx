@@ -29,9 +29,9 @@ export const ProductPage = () => {
   }, []);
 
   return (
-    <div className="max-w-[62.5rem] mx-auto gap-6 flex mt-20">
+    <div className="max-w-[72.5rem] mx-auto gap-6 flex flex-col lg:flex-row mt-20">
       <ProductList />
-      <div className="selft-start min-w-[20rem]">
+      <div className="selft-start min-w-[min(20rem,100%)]">
         <Cart onComfirmOrder={handleOrderConfirm} />
       </div>
       {confirmOrder && <ConfirmationModal onNewOrder={handleStartNewOrder} />}

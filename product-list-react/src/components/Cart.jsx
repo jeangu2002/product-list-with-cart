@@ -20,11 +20,7 @@ export const Cart = ({ onComfirmOrder }) => {
       <div className="grid gap-4 mt-4">
         {!products || Object.keys(products).length === 0 ? (
           <>
-            <img
-              className="justify-self-center"
-              src={new URL("../assets/images/illustration-empty-cart.svg", import.meta.url).href}
-              alt="empty cart"
-            />
+            <img className="justify-self-center" src={"../assets/images/illustration-empty-cart.svg"} alt="empty cart" />
             <p className="text-(--cl-rose-400) text-center">Your added items will appear here</p>
           </>
         ) : (
@@ -65,7 +61,7 @@ export const Cart = ({ onComfirmOrder }) => {
                 this is a <span className="font-bold">carbon-neutral</span> delivery
               </p>
             </div>
-            <button className="bg-(--cl-red) text-white rounded-full py-2 w-full" onClick={onComfirmOrder}>
+            <button className="bg-(--cl-red) text-white rounded-full py-3 w-full" onClick={onComfirmOrder}>
               Confirm order
             </button>
           </>

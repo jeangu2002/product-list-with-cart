@@ -14,5 +14,6 @@
   /* font-family: 'Red Hat Text', sans-serif; */
   --ff-red-hat: "Red Hat Text", sans-serif;
 
-  --product-card-cols: repeat(auto-fit, minmax(10rem, 1fr));
+  --product-card-cols: repeat(auto-fit, minmax(18.75rem, 1fr));
+  --product-card-cols-lg: repeat(auto-fit, minmax(12rem, 1fr));
 }
